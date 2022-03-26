@@ -17,7 +17,7 @@
 function findNextSquare(sq){
     // Return the next square if sq is a pefect square, -1 otherwise
     let sqrt = Math.sqrt(sq);
-    if(sqrt % sqrt === 0){
+    if(sqrt % 1 === 0){
         sqrt += 1;
         const nextSquare = Math.pow(sqrt, 2);
         return nextSquare;
@@ -25,3 +25,25 @@ function findNextSquare(sq){
         return -1;
     }
 }
+
+findNextSquare(121) // == 144
+findNextSquare(625) // == 676
+findNextSquare(319225) // == 320356
+findNextSquare(15241383936) // == 15241630849
+findNextSquare(155) // == -1
+findNextSquare(342786627) // == -1
+
+/*  Other methods and examples
+    
+    // using Number.isInteger()
+
+    function findNextSquare(sq) {
+        var root = Math.sqrt(sq);
+        if (Number.isInteger(root)) {
+            return Math.pow(root + 1, 2);
+        } else {
+            return -1;
+        }
+    }
+
+*/
