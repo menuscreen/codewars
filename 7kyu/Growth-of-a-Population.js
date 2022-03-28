@@ -34,7 +34,7 @@ function nbYear(p0, percent, aug, p) {
     //console.log(`Start: ${p0} Growth: ${percent/100}% Addition: ${aug} Goal: ${p}`);
     let years = 0;
     while(p0 < p){
-        p0 = p0 + Math.floor(p0 * (percent / 100)) + aug;
+        p0 = p0 + Math.floor(p0 * (percent / 100)) + aug; // Math.floor() aka no partial people
         //console.log(`${p0} = ${p0} + (${p0} * ${percent / 100}) + ${aug};`);
         years++;
         //console.log(`Yearend: ${years}`);
