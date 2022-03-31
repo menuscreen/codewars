@@ -30,3 +30,12 @@ number([[10,0],[3,5],[5,8]]) // == 5
 number([[3,0],[9,1],[4,10],[12,2],[6,1],[7,10]]) // == 17
 number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]) // == 21
 number([[0,0]]) // == 0
+
+/* other examples
+
+    // using .reduce()
+    const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+
+    const number = busStops => busStops.reduce((p,n) => p+n[0]-n[1],0)
+
+*/
