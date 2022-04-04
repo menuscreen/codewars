@@ -21,9 +21,10 @@
 */
 
 function removeSmallest(numbers) {
-    let indexOfMin = numbers.indexOf(Math.min(...numbers));
-    numbers.splice(indexOfMin, 1);
-    return numbers;
+    let mutatedArr = [...numbers]; // copy original array to new array (keeps original array intact)
+    let indexOfMin = mutatedArr.indexOf(Math.min(...mutatedArr));
+    mutatedArr.splice(indexOfMin, 1);
+    return mutatedArr;
 }
 
 removeSmallest([1, 2, 3, 4, 5]) // == [2, 3, 4, 5]
