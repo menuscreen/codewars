@@ -22,3 +22,21 @@ function longest(s1, s2) {
 longest("aretheyhere", "yestheyarehere") // == "aehrsty"
 longest("loopingisfunbutdangerous", "lessdangerousthancoding") // == "abcdefghilnoprstu"
 longest("inmanylanguages", "theresapairoffunctions") // == "acefghilmnoprstuy"
+
+
+/* Other Examples/Solutions
+
+    const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+
+    function longest(s1, s2) {
+        return Array.from(new Set(s1 + s2)).sort().join('');
+    }
+
+
+    function longest(s1, s2) {
+        let str = new Set([...s1, ...s2]);
+        return [...str].sort().join('');
+    }
+
+*/
