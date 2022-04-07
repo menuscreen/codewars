@@ -10,7 +10,18 @@
     Note: for this kata y isn't considered a vowel.
 */
 function disemvowel(str) {
-    const vowels = [a,e,i,o,u];
-    // 
-    return str;
+    const vowels = ['A','a','E','e','I','i','O','o','U','u'];
+    let newStr = [...str];
+    for (let i = 0; i < vowels.length; i++){
+        for (let j = 0; j < newStr.length; j++){
+            if (vowels[i] === newStr[j]){
+                newStr.splice(j, 1, '');
+            }
+        }
+    }
+    return newStr.join('');
 }
+
+disemvowel("This website is for losers LOL!") // == "Ths wbst s fr lsrs LL!")
+disemvowel("No offense but,\nYour writing is among the worst I've ever read") // == "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
+disemvowel("What are you, a communist?") // == "Wht r y,  cmmnst?")
