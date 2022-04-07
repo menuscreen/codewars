@@ -25,3 +25,28 @@ function disemvowel(str) {
 disemvowel("This website is for losers LOL!") // == "Ths wbst s fr lsrs LL!")
 disemvowel("No offense but,\nYour writing is among the worst I've ever read") // == "N ffns bt,\nYr wrtng s mng th wrst 'v vr rd")
 disemvowel("What are you, a communist?") // == "Wht r y,  cmmnst?")
+
+
+/* other examples/solutions
+
+    function disemvowel(str) {
+        return str.replace(/[aeiou]/gi, '');
+    }
+
+
+    disemvowel = str => str.replace(/[aeiou]/gi,'');
+
+
+    const disemvowel = (str) => {
+        const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+        let newStr = '';
+        for (let i = 0; i <= str.length; i++) {
+            let char = str.charAt(i);
+            if (vowels.indexOf(char) == -1) {
+                newStr += char;
+            }
+        }
+        return newStr;
+    }
+    
+*/
