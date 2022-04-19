@@ -6,9 +6,43 @@
     Note: The function accepts an integer and returns an integer
 */
 function squareDigits(num){
-    return 0;
+    let strArr = num.toString().split('');
+    console.log(strArr);
+    for (i = 0; i < strArr.length; i++){
+        strArr[i] = strArr[i] * strArr[i];
+    }
+    num = Number(strArr.join(''));
+    // console.log(num);
+    return num;
 }
 
 squareDigits(3212) // == 9414
 squareDigits(2112) // == 4114
 squareDigits(0) // == 0
+
+/* Other solutions
+
+    function squareDigits(num){
+        return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+    }
+
+    function squareDigits(num){
+        var array = num.toString().split('').map( function(int) {
+            var i = parseInt(int);
+            return i * i;
+        });
+  
+        return parseInt(array.join(""));
+    }
+
+
+    function squareDigits(num){
+        var string = num.toString();
+        var results = [];
+        for (var i = 0; i < string.length; i++){
+            results[i] = string[i] * string[i];
+        }
+        return Number(results.join(''));
+    };
+    
+*/
