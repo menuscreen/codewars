@@ -14,8 +14,37 @@ rate of the printer as a string representing a rational whose numerator is the n
 of errors and the denominator the length of the control string. Don't reduce this
 fraction to a simpler expression.
 
-The string has a length greater or equal to one and contains only letters from ato z.
+The string has a length greater or equal to one and contains only letters from a to z.
 */
+
 function printerError(s) {
-    // your code
+    let errors = 0;
+    let total = 0;
+    const regex = /[a-m]/;
+    for (let i = 0; i < s.length; i++){
+        if (!regex.test(s[i])){
+            errors++;
+        }
+        total++;
+    }
+    return `${errors}/${total}`;
 }
+
+printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz") // == "3/56"
+
+/* other solutions/examples
+
+    const printerError = s => `${s.replace(/[a-m]/gi, "").length}/${s.length}`;
+
+
+    function printerError(s) {
+        var count = 0;
+        for(var i = 0; i < s.length; i++) {
+            if (s[i] > "m") {
+                count++;
+            }
+        }
+        return count+"/"+s.length;
+    }
+
+*/
