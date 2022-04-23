@@ -20,3 +20,29 @@ friend(["Ryan", "Jimmy", "123", "4", "Cool Man"]) // == ["Ryan"])
 friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"]) // == ["Jimm", "Cari", "aret"])
 friend(["Love", "Your", "Face", "1"]) // == ["Love", "Your", "Face"])
 
+/* Other examples/solutions
+
+    function friend(friends){
+        return friends.filter(n => n.length === 4)
+    }
+
+
+    const friend = friends => friends.filter(friend => friend.length == 4);
+
+
+    function friend(friends){
+        //Create new array called "myFriends" for add your friends
+        var i,
+            len = friends.length,
+            myFriends = [];
+        
+        for (i = 0; i < len; i++) {   
+            //Check for names with length equal to four and it is not a number
+            if(friends[i].length == 4 && isNaN(friends[i])) {
+                myFriends.push(friends[i]);
+            } 
+        }   
+        return myFriends;
+    }
+
+*/
