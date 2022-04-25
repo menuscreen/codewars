@@ -28,8 +28,19 @@ Example
 */
 
 function wave(str){
-    
-    
+    let theWave = [];
+    let newStr = '';
+    for (let i = 0; i < str.length; i++){
+        newStr = str.split('');
+        if (newStr[i] === '' || newStr[i] === ' '){
+            continue;
+        }else{
+            newStr[i] = newStr[i].toUpperCase();
+            newStr = newStr.join('');
+            theWave.push(newStr);
+        }
+    }
+    return theWave;
 }
 
 wave("hello") // == Should return: ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
