@@ -28,7 +28,8 @@ Example
 */
 
 function wave(str){
-    // Code here
+    
+    
 }
 
 wave("hello") // == Should return: ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
