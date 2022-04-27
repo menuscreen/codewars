@@ -44,3 +44,38 @@ countSmileys([]) // == 0);
 countSmileys([':D',':~)',';~D',':)']) // == 4);
 countSmileys([':)',':(',':D',':O',':;']) // == 2);
 countSmileys([';]', ':[', ';*', ':$', ';-D']) // == 1);
+
+/* Other examples
+
+    function countSmileys(arr) {
+        return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+    }
+
+
+    function countSmileys(arr) {
+        var smileys = [":)",";)",":-)",";-)",";~)",":~)",":D",";D",":-D",":~D",";-D",";~D"];
+        var count = 0;
+
+        for (var i=0; i<arr.length; i++){
+            for (var j=0; j<smileys.length; j++){
+                if (arr[i]===smileys[j]){
+                    count++;
+                }
+            }
+        }   
+        return count;
+    }
+
+
+    const countSmileys = ss => ss.reduce((a, s) => a + /^[:;][-~]?[D)]$/.test(s), 0);
+
+
+    const faces = new Set()
+    for (let eyes of [':',';'])
+        for (let nose of ['-','~',''])
+            for (let mouth of [')','D'])
+                faces.add(eyes+nose+mouth)
+
+    countSmileys =(arr)=> arr.filter(x => faces.has(x)).length
+
+*/
