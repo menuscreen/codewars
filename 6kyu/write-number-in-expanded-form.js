@@ -31,3 +31,37 @@ function expandedForm(num){
 expandedForm(12) // == '10 + 2'
 expandedForm(42) // == '40 + 2'
 expandedForm(70304) // == '70000 + 300 + 4'
+
+
+/* Other examples
+
+const expandedForm = n => n.toString()
+                            .split("")
+                            .reverse()
+                            .map( (a, i) => a * Math.pow(10, i))
+                            .filter(a => a > 0)
+                            .reverse()
+                            .join(" + ");
+
+
+function expandedForm(num) {
+    return String(num)
+                    .split("")
+                    .map((num, index, arr) => num + "0".repeat(arr.length - index -1 ))
+                    .filter((num) => Number(num) != 0)
+                    .join(" + ")
+}
+
+
+function expandedForm(num) {
+    num = String(num);
+    let result = [];
+    for (var i = 0; i < num.length; i++) {
+        if (num[i] == 0) continue;
+        else result.push(num[i] + "0".repeat(num.length -i -1))
+    }
+    return result.join(" + ")
+}
+
+
+*/
