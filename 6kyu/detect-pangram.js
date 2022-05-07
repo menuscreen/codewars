@@ -44,5 +44,4 @@ function isPangram(string) {
     return alphabetList.every((letter) => string.toLowerCase().includes(letter));
 }
 
-
 */
