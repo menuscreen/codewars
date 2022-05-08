@@ -15,3 +15,13 @@ It must return the display text as shown in the examples:
 Note: For 4 or more names, the number in "and 2 others" simply increases.
 
 */
+
+function likes(names) {
+    // TODO
+}
+
+likes([]) // =='no one likes this'
+likes(['Peter']) // =='Peter likes this'
+likes(['Jacob', 'Alex']) // =='Jacob and Alex like this'
+likes(['Max', 'John', 'Mark']) // =='Max, John and Mark like this'
+likes(['Alex', 'Jacob', 'Mark', 'Max']) // =='Alex, Jacob and 2 others like this'
