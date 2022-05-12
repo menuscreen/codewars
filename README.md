@@ -1,4 +1,4 @@
-# codewars
-Codewars coding practice
+# Codewars
+<img href="https://www.codewars.com/users/menuscreen/badges/large">
 
-https://www.codewars.com/users/menuscreen
+I practice javascript coding challendes at codewars.com. Challenges of 8kyu's are easiest, followed by 7,6,5 .. etc.
