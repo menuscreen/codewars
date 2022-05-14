@@ -17,9 +17,9 @@ function sortArray(array) {
             oddArr.push(array[i]);
         }
     }
-    oddArr.sort( (a,b) => a - b);
+    oddArr.sort((a,b) => a - b);
     let j = 0;
-    for (let i = 0; i < array.length; i++){
+    for (i = 0; i < array.length; i++){
         if ((array[i] % 2) !== 0){
             array[i] = oddArr[j];
             j++;
@@ -31,3 +31,40 @@ function sortArray(array) {
 sortArray([5, 3, 2, 8, 1, 4]) // == [1, 3, 2, 8, 5, 4]
 sortArray([5, 3, 1, 8, 0]) // == [1, 3, 5, 8, 0]
 sortArray([]) // == []
+
+/* Other examples/solutions
+
+    function sortArray(array) {
+        const odd = array.filter((x) => x % 2).sort((a,b) => a - b);
+        return array.map((x) => x % 2 ? odd.shift() : x);
+    }
+
+
+    function sortArray(array) {
+        var odds = [];
+        //loop, if it's odd, push to odds array
+        for (var i = 0; i < array.length; ++i) {
+            if (array[i]%2 !== 0) {
+                odds.push(array[i]);
+            }
+        }
+        //sort odds from smallest to largest
+        odds.sort(function(a,b){
+            return a-b;
+        });
+        //loop through array, replace any odd values with sorted odd values
+        for (var j = 0; j < array.length; ++j) {
+            if (array[j]%2 !== 0) {
+                array[j] = odds.shift();
+            }
+        }
+        return array;
+    }
+
+
+    function sortArray(array) {
+        var odd = array.filter(elem => elem % 2 !== 0).sort((a, b) => a - b);
+        return array.map(elem => elem % 2 === 0 ? elem : odd.shift());
+    }
+
+*/
