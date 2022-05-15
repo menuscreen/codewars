@@ -9,3 +9,15 @@
 
     All letters will be lowercase and all inputs will be valid.
 */
+function high(x){
+
+}
+
+high('man i need a taxi up to ubud') // == 'taxi'
+high('what time are we climbing up the volcano') // == 'volcano'
+high('take me to semynak') // == 'semynak'
+high('aa b') // == 'aa'
+high('b aa') // == 'b'
+high('bb d') // == 'bb'
+high('d bb') // == 'd'
+high('aaa b') // == 'aaa'
