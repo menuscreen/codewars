@@ -10,7 +10,13 @@
     All letters will be lowercase and all inputs will be valid.
 */
 function high(x){
-
+    const alpha = ['abcdefghijklmnopqrstuvwxyz'];
+    let score = 0;
+    for (let i = 0; i < x.length; i++){
+        let char = x[i];
+        score = score + alpha.indexOf[char];
+    }
+    return score;
 }
 
 high('man i need a taxi up to ubud') // == 'taxi'
