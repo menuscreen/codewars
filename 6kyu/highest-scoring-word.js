@@ -12,11 +12,11 @@
 function high(x){
     const alpha = ['abcdefghijklmnopqrstuvwxyz'];
     let score = 0;
+    let indexOfHighScore = null;
     for (let i = 0; i < x.length; i++){
-        let char = x[i];
-        score = score + alpha.indexOf[char];
+        //
     }
-    return score;
+    return //;
 }
 
 high('man i need a taxi up to ubud') // == 'taxi'
