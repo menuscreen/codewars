@@ -12,9 +12,11 @@
 function high(x){
     const alpha = ['abcdefghijklmnopqrstuvwxyz'];
     let score = 0;
-    let indexOfHighScore = null;
+    let indexOfHighScore = 0;
     for (let i = 0; i < x.length; i++){
-        //
+        //split input by word
+        //check word score by letter
+        //if word score letter higher than previous replace indexscore with new index
     }
     return //;
 }
