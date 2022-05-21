@@ -8,3 +8,12 @@
         ""             =>  ""
 
 */
+
+// complete the function
+function solution(string) {
+    
+}
+
+
+solution('camelCasing') // == 'camel Casing'
+solution('camelCasingTest') // == 'camel Casing Test'
