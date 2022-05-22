@@ -11,7 +11,8 @@
 
 // complete the function
 function solution(string) {
-    
+    // for each letter check case
+        // if case capital, split/add space -1
 }
 
 
