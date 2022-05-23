@@ -9,10 +9,17 @@
 
 */
 
-// complete the function
 function solution(string) {
-    // for each letter check case
-        // if case capital, split/add space -1
+    let newStr = '';
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] !== string[i].toUpperCase()){
+            newStr += string[i];
+        }else {
+            newStr += ' ';
+            newStr += string[i];
+        }
+    }
+    return newStr;
 }
 
 
