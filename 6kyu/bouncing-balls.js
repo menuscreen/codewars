@@ -32,3 +32,7 @@
 function bouncingBall(h,  bounce,  window) {
     // your code here
 }
+
+bouncingBall(3.0, 0.66, 1.5) // == 3 
+bouncingBall(30.0, 0.66, 1.5) // ==  15
+bouncingBall(3.0, 1.0, 1.5) // == -1
