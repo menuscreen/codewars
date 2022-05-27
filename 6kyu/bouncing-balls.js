@@ -47,3 +47,49 @@ function bouncingBall(h,  bounce,  window) {
 bouncingBall(3.0, 0.66, 1.5) // == 3 
 bouncingBall(30.0, 0.66, 1.5) // ==  15
 bouncingBall(3.0, 1.0, 1.5) // == -1
+
+/* Other examples/solutions
+
+    function bouncingBall(h,  bounce,  window) {
+        var rebounds = -1;
+        if (bounce > 0 && bounce < 1) while (h > window) rebounds+=2, h *= bounce;
+        return rebounds;
+    }
+
+
+    function bouncingBall(h,  bounce,  window) {
+        if( h <= 0 || bounce >= 1 || bounce <= 0 || window >= h) return -1
+        let seen = 0;
+        
+        while(h > window){
+            seen += 1
+            h *= bounce
+            if(h > window) seen += 1
+        }
+        return seen;
+    }
+
+
+    function bouncingBall(h,  bounce,  window) {
+        if(h <= 0 || bounce <= 0 || bounce >= 1 || window >= h){
+            return -1;
+        }
+
+        var newHeight = h * bounce;
+        return bouncingBall(newHeight, bounce, window) + 2;
+    }
+
+
+    function bouncingBall(h,  bounce,  window) {
+        if (h <= 0.0 || bounce <= 0.0 || bounce >= 1.0 || window >= h) {
+            return -1;
+        }
+        
+        let views = 1;
+        while ((h *= bounce) > window) {
+            views += 2;
+        }
+        return views;
+    }
+
+*/
