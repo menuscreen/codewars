@@ -17,3 +17,8 @@
         findNb(91716553919377) --> -1
 
 */
+
+function findNb(m) {
+    // your code
+    return (-1);
+}
