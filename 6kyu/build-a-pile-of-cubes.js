@@ -19,8 +19,19 @@
 */
 
 function findNb(m) {
-    // your code
-    return (-1);
+    let total = 0;
+    let n = 0;
+
+    while(total < m){
+        n += 1;
+        total += n**3;
+    }
+
+    if(total === m){
+        return n;
+    }else {
+        return (-1);
+    }
 }
 
 findNb(4183059834009) // == 2022
