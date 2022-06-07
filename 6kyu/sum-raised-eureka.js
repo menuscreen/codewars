@@ -24,3 +24,6 @@
 
     sumDigPow(90, 100) == []
 */
+function sumDigPow(a, b) {
+    // Your code here
+}
