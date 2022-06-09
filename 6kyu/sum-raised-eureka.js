@@ -25,7 +25,24 @@
     sumDigPow(90, 100) == []
 */
 function sumDigPow(a, b) {
-    // Your code here
+    let arr = [];
+    for(let n = a; n <= b; n++){
+        arr.push(n);
+    }
+    let arrItem = [];
+    let sum;
+    let arrResult = [];
+    for(let i = 0; i < arr.length; i++){
+        arrItem = (''+arr[i]).split('');
+        sum = 0;
+        for (let j = 0; j < arrItem.length; j++){
+            sum += Number(arrItem[j])**(j+1);
+        }
+        if (arr[i] === sum){
+            arrResult.push(arr[i]);
+        }
+    }
+    return arrResult;
 }
 
 
