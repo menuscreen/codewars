@@ -53,3 +53,42 @@ sumDigPow(90, 100) // ==  []
 sumDigPow(90, 150) // ==  [135]
 sumDigPow(50, 150) // ==  [89, 135]
 sumDigPow(10, 150) // ==  [89, 135]
+
+
+/* other example solutions  
+
+    function sumDigPow(a, b) {
+        var ans = [];
+        while(a <= b){
+            if(a.toString().split('').reduce((x,y,i)=>x + +y ** (i + 1),0) == a)
+                ans.push(a);
+            a++;
+        }
+        return ans;
+    }
+
+
+    function sumDigPow(a, b) {
+        var arr = [];
+        for (var i = a; i <= b; i++) {
+            var sum = 0;
+            for (var j = 0; j <= String(i).length; j++) {
+                sum += Math.pow(parseInt(String(i)[j]), j+1);  
+                if (sum == i) arr.push(i);
+            }
+        }
+        return arr;
+    }
+
+
+    function filterFunc(n) {
+        return `${n}`.split("").map((x, i) => x ** (i+1)).reduce((a, b) => a+b) == n;
+    }
+    function *range(a, b) {
+        for (var i = a; i <= b; ++i) yield i;
+    }
+    function sumDigPow(a, b) {
+        return Array.from(range(a, b)).filter(filterFunc);
+    }
+
+*/
