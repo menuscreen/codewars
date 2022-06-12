@@ -38,3 +38,28 @@ function deleteNth(arr,n){
 deleteNth([20,37,20,21], 1) // == [20,37,21]
 deleteNth([1,1,3,3,7,2,2,2,2], 3) //== [1, 1, 3, 3, 7, 2, 2, 2]
 
+/* other example solutions
+
+    function deleteNth(arr,x) {
+        var cache = {};
+        return arr.filter(function(n) {
+            cache[n] = (cache[n]||0) + 1;
+            return cache[n] <= x;
+        });
+    }
+
+
+    const deleteNth = (a, x) => {
+        let m = {};
+        return a.filter( v => (m[v] = m[v]+1||1) <= x );
+    }
+
+
+    function deleteNth(arr,x){
+        var count = {};
+        return arr.filter(function(a){
+            count[a] = ~~count[a]+1;
+            return count[a]<=x;
+        })
+    }
+*/
