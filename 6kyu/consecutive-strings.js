@@ -19,9 +19,12 @@
 
         In the same way:
         longest_consec(["zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"], 2) --> "abigailtheta"
-        
+
     n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (return Nothing in Elm).
 
     Note
     consecutive strings : follow one after another without an interruption
 */
+function longestConsec(strarr, k) {
+    // your code
+}
