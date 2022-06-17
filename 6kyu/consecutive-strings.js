@@ -26,7 +26,25 @@
     consecutive strings : follow one after another without an interruption
 */
 function longestConsec(strarr, k) {
-    // your code
+    const n = strarr.length;
+    if (n === 0 || k > n || k <= 0) {
+        return "";
+    }
+    let current = 0;
+    let lengthTest = 0;
+    let testStr = "";
+    let longestStr = "";
+    for (current; current <= (n - k); current++) {
+        testStr = strarr[current];
+        for (let i = 1; i < k; i++) {
+            testStr += strarr[current + i];
+        }
+        if (testStr.length > lengthTest) {
+            lengthTest = testStr.length;
+            longestStr = testStr;
+        }
+    }
+    return longestStr;
 }
 
 
