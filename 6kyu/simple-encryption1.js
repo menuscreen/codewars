@@ -18,3 +18,11 @@
     If the string S is an empty value or the integer N is not positive, return the first argument 
     without changes.
 */
+
+function encrypt(text, n) {
+
+}
+
+function decrypt(encryptedText, n) {
+
+}
