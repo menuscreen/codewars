@@ -41,3 +41,21 @@ arrayDiff([1,2,2], []) //== [1,2,2]
 arrayDiff([], [1,2]) //== []
 arrayDiff([1,2,3], [1,2]) //== [3]
 
+/* Other example solutions
+
+function array_diff(a, b) {
+  return a.filter(e => !b.includes(e));
+}
+
+
+function array_diff(a, b) {
+  return a.filter(function(x) { return b.indexOf(x) == -1; });
+}
+
+
+function array_diff(a, b) {
+  b = new Set(b)
+  return a.filter(v => !b.has(v))
+}
+
+*/
