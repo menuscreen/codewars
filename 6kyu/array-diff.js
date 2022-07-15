@@ -9,6 +9,35 @@
 
         arrayDiff([1,2,2,2,3],[2]) == [1,3]
 */
-function arrayDiff(a, b) {
-    // your code here
-}
+function arrayDiff(a = [], b = []) {
+    const aLength = a.length;
+    const bLength = b.length;
+
+    if ( aLength == 0 || bLength == 0 ) {
+        return a
+    }
+
+    let diffArray = a;
+    let aPtr = 0;
+    let bPtr = 0;
+    while (bPtr < bLength) {
+        while (aPtr < aLength) {
+            if (diffArray[aPtr] === b[bPtr]) {
+                diffArray.splice(aPtr, 1);
+            } else {
+                aPtr++;
+            };
+        };
+        bPtr++;
+        aPtr = 0;
+    };
+    return diffArray;
+};
+
+arrayDiff([1,2], [1]) //== [2]
+arrayDiff([1,2,2], [1]) //== [2,2]
+arrayDiff([1,2,2], [2]) //== [1]
+arrayDiff([1,2,2], []) //== [1,2,2]
+arrayDiff([], [1,2]) //== []
+arrayDiff([1,2,3], [1,2]) //== [3]
+
