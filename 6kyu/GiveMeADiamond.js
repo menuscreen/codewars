@@ -28,3 +28,7 @@
             ...that is:
             "  *\n ***\n*****\n ***\n  *\n"
 */
+function diamond(n){
+    // your code here
+    return diam;
+}
