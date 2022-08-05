@@ -19,7 +19,7 @@ function findUniq(arr) {
     let middle = arr[j];
     let right = arr[k];
 
-    while (right < arrLength){
+    while (k <= arrLength){
         if (left == middle && middle == right){ // [ 0, 0, 0 ]
             left = arr[i++];
             middle = arr[j++];
