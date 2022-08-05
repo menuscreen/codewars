@@ -68,7 +68,6 @@ function dirReduc(arr){
             spliceCount++;
         } else if (left == "WEST" && right == "EAST" || left == "EAST" && right == "WEST") {
             arr.splice(i, 2);
-            console.log(arr);
             spliceCount++;
         } else {
             i++;
@@ -84,3 +83,72 @@ function dirReduc(arr){
 console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])) // == ["WEST"]
 console.log(dirReduc(["NORTH", "WEST", "SOUTH", "EAST"])) // == ["NORTH", "WEST", "SOUTH", "EAST"]
 console.log(dirReduc(["NORTH", "SOUTH", "EAST", "WEST", "EAST", "WEST"])) // == []
+
+/*
+
+function dirReduc(plan) {
+  var opposite = {
+    'NORTH': 'SOUTH', 'EAST': 'WEST', 'SOUTH': 'NORTH', 'WEST': 'EAST'};
+  return plan.reduce(function(dirs, dir){
+      if (dirs[dirs.length - 1] === opposite[dir])
+        dirs.pop();
+      else
+        dirs.push(dir);
+      return dirs;
+    }, []);
+}
+
+
+function dirReduc(arr) {
+  var str = arr.join(''), pattern = /NORTHSOUTH|EASTWEST|SOUTHNORTH|WESTEAST/;
+  while (pattern.test(str)) str = str.replace(pattern,'');
+  return str.match(/(NORTH|SOUTH|EAST|WEST)/g)||[];
+}
+
+
+function dirReduc(arr){
+  var opposite = { "SOUTH":"NORTH", "NORTH":"SOUTH", "WEST":"EAST", "EAST":"WEST"}
+  return arr.reduce(function (a, b, i) {
+    opposite[a.slice(-1)] === b ? a.pop() : a.push(b)
+    return a
+  }, [])
+}
+
+
+function dirReduc(arr){
+  var count = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === "WEST" && arr[i+1] === "EAST" ||
+        arr[i] === "EAST" && arr[i+1] === "WEST" ||
+        arr[i] === "NORTH" && arr[i+1] === "SOUTH" ||
+        arr[i] === "SOUTH" && arr[i+1] === "NORTH") {
+        arr.splice(i, 2);
+        count++;
+        i--;
+    }
+  }
+  return count === 0 ? arr : dirReduc(arr);
+}
+
+
+
+function isOppo(dir1,dir2) {
+    if (dir1 + dir2 === 'SOUTHNORTH') return true;
+    if (dir1 + dir2 === 'NORTHSOUTH') return true;
+    if (dir1 + dir2 === 'EASTWEST') return true;
+    if (dir1 + dir2 === 'WESTEAST') return true;
+    return false;
+}
+  
+function dirReduc(arr){
+  var len = arr.length
+  for (var i = 0; i < len - 1; i++) {
+    if (isOppo(arr[i], arr[i+1])) {
+      arr.splice(i,2);
+      return dirReduc(arr);
+    }
+  }
+  return arr;
+}
+
+*/
