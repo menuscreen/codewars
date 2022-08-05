@@ -57,7 +57,28 @@ Task:
         if you want to translate, please ask before translating.
 */
 function dirReduc(arr){
-    // ...
+    let spliceCount = 1
+    let i = 0;
+
+    while (spliceCount > 0 && i+1 <= arr.length){
+        let left = arr[i];
+        let right = arr[i+1];
+        if (left == "NORTH" && right == "SOUTH" || left == "SOUTH" && right == "NORTH") {
+            arr.splice(i, 2);
+            spliceCount++;
+        } else if (left == "WEST" && right == "EAST" || left == "EAST" && right == "WEST") {
+            arr.splice(i, 2);
+            console.log(arr);
+            spliceCount++;
+        } else {
+            i++;
+            if (i+1 > arr.length){
+                spliceCount--;
+                i = 0;
+            }        
+        };
+    }
+    return arr;
 };
 
 console.log(dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])) // == ["WEST"]
