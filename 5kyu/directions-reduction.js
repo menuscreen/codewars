@@ -63,12 +63,10 @@ function dirReduc(arr){
     while (spliceCount > 0 && i+1 <= arr.length){
         let left = arr[i];
         let right = arr[i+1];
-        if (left == "NORTH" && right == "SOUTH" || left == "SOUTH" && right == "NORTH") {
-            arr.splice(i, 2);
-            spliceCount++;
-        } else if (left == "WEST" && right == "EAST" || left == "EAST" && right == "WEST") {
-            arr.splice(i, 2);
-            spliceCount++;
+        if (left == "NORTH" && right == "SOUTH" || left == "SOUTH" && right == "NORTH" ||
+            left == "WEST" && right == "EAST" || left == "EAST" && right == "WEST") {
+                arr.splice(i, 2);
+                spliceCount++;
         } else {
             i++;
             if (i+1 > arr.length){
