@@ -56,3 +56,6 @@ Task:
         and can't become such. Hence the result path is itself : ["NORTH", "WEST", "SOUTH", "EAST"].
         if you want to translate, please ask before translating.
 */
+function dirReduc(arr){
+    // ...
+};
