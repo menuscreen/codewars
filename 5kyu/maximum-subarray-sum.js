@@ -12,3 +12,6 @@
     Empty list is considered to have zero greatest sum. Note that the empty list or array 
     is also a valid sublist/subarray.
 */
+var maxSequence = function(arr){
+    // ...
+}
