@@ -12,9 +12,36 @@
     Empty list is considered to have zero greatest sum. Note that the empty list or array 
     is also a valid sublist/subarray.
 */
+function allNegative(arr){
+    for (num in arr){
+        if (num < 0){
+            continue;
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
 
-var maxSequence = function(arr){
-    // ...
+let maxSequence = function(arr){
+    if (allNegative(arr)){
+        return 0;
+    }
+    if (arr === []){
+        return [];
+    }
+    let end = arr.length - 1;
+    let maxSum = arr.reduce((partialSum, a) => partialSum + a, 0);
+    while (end > 1) {
+        for (let i = 0; (i + end) < arr.length; i++){
+            let currSum = (arr.slice(i, end)).reduce((partialSum, a) => partialSum + a, 0);
+            if (currSum > maxSum){
+                maxSum = currSum;
+            }
+        }
+        end--;
+    }
+    // return maxSum; //work in progress
 }
 
 console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])) // == 6
