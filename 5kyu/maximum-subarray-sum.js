@@ -30,10 +30,10 @@ let maxSequence = function(arr){
     if (arr === []){
         return [];
     }
-    let end = arr.length - 1;
+    let end = arr.length;
     let maxSum = arr.reduce((partialSum, a) => partialSum + a, 0);
     while (end > 1) {
-        for (let i = 0; (i + end) < arr.length; i++){
+        for (let i = 0; (i + end-1) <= arr.length; i++){
             let currSum = (arr.slice(i, end)).reduce((partialSum, a) => partialSum + a, 0);
             if (currSum > maxSum){
                 maxSum = currSum;
@@ -41,7 +41,7 @@ let maxSequence = function(arr){
         }
         end--;
     }
-    // return maxSum; //work in progress
+    return maxSum;
 }
 
 console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])) // == 6
